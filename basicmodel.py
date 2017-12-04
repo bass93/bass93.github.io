@@ -19,6 +19,8 @@ num_of_iterations = 100
 neighbourhood = 5
 agents = []
 environment = []
+colours = ['red', 'blue', 'yellow', 'white', 'green', 'purple', 'grey', 'black', 'brown', 'magenta']
+# Colours assinged to each individual agent (making it visually easier to track movement)
 
 
 #   The imported dataset forming the environment (creating a 2-D list)
@@ -34,7 +36,7 @@ f.close()
 
 #   Making the agents (set within the environment extents)
 for i in range(num_of_agents):
-    agents.append(agentframework.Agent(environment,agents)) 
+    agents.append(agentframework.Agent(environment,agents, colours[i])) 
 
 
 #   Moving agents (set to be random per iteration)
